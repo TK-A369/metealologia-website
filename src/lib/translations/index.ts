@@ -7,4 +7,4 @@ const config = {
   translations,
 };
 
-export const { t, l, locales, locale } = new i18n(config);
+export const { t, l, locales, locale, loadTranslations } = new i18n(config);
