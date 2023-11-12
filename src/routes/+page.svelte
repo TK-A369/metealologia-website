@@ -4,6 +4,7 @@
 
 	import LatestData from '$lib/display_components/latest_data.svelte';
 	import ChartData from '$lib/display_components/chart_data.svelte';
+	import StationsList from '$lib/display_components/stations_list.svelte';
 
 	import { t, l, locales } from '$lib/translations';
 </script>
@@ -23,12 +24,10 @@
 	<Cell span={6}>
 		<ChartData />
 	</Cell>
-	<Cell span={3}>
-		<Paper>
-			<Title>Moderately important weather data...</Title>
-		</Paper>
+	<Cell spanDevices={{ desktop: 3, tablet: 3, phone: 2 }}>
+		<StationsList />
 	</Cell>
-	<Cell span={3}>
+	<Cell spanDevices={{ desktop: 3, tablet: 3, phone: 2 }}>
 		<Paper>
 			<Title>Moderately important weather data...</Title>
 		</Paper>

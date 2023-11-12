@@ -8,6 +8,9 @@ export default ({
       info: 'You can view present or past weather measurements here.',
       temperature: 'Temperature',
       latest_measurements: 'Latest measurements',
+      stations: 'Weather stations',
+      station: 'Weather station',
+      data_on_chart: 'Data on chart',
     }
   },
   pl: {
@@ -17,6 +20,9 @@ export default ({
       info: 'Możesz tu zobaczyć obecne lub historyczne dane pogodowe.',
       temperature: 'Temperatura',
       latest_measurements: 'Najnowsze odczyty',
+      stations: 'Stacje pogodowe',
+      station: 'Stacja pogodowa',
+      data_on_chart: 'Dane na wykresie',
     }
   }
 });

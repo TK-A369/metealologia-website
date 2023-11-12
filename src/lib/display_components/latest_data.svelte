@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Paper, { Content, Title } from '@smui/paper';
+
 	import { t, l, locales } from '$lib/translations';
+
+	export let stationId = 'alpha';
 </script>
 
 <Paper>

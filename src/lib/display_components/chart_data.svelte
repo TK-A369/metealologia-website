@@ -1,10 +1,12 @@
 <script lang="ts">
-	import Paper, { Content } from '@smui/paper';
+	import Paper, { Title, Content } from '@smui/paper';
 
 	import { Html, LayerCake, ScaledSvg } from 'layercake';
 	import Line from '$lib/chart_components/Line.svelte';
 	import AxisX from '$lib/chart_components/AxisX.html.svelte';
 	import AxisY from '$lib/chart_components/AxisY.html.svelte';
+
+	import { t, l, locales } from '$lib/translations';
 
 	const points = [
 		{ x: 0, y: 0 },
@@ -16,6 +18,7 @@
 </script>
 
 <Paper>
+	<Title>{$t('content.data_on_chart')}</Title>
 	<Content>
 		<div class="chart-container">
 			<LayerCake ssr={true} percentRange={true} x="x" y="y" data={points}>
