@@ -9,7 +9,7 @@ export const load: LayoutServerLoad = async ({ cookies, url }) => {
 	if (!language) {
 		console.log("No language cookie found, setting to pl");
 		language = 'pl';
-		cookies.set('language', language);
+		cookies.set('language', language, { path: "/", secure: false });
 	}
 
 	if (url.searchParams.get('lang_switch') == 'true') {
@@ -25,7 +25,7 @@ export const load: LayoutServerLoad = async ({ cookies, url }) => {
 				break;
 		}
 		console.log(`Switching language to ${language}`);
-		cookies.set('language', language);
+		cookies.set('language', language, { path: "/", secure: false });
 		throw redirect(302, '/');
 	}
 
