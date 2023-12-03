@@ -4,7 +4,7 @@ import { loadTranslations } from '$lib/translations';
 
 import type { LayoutServerLoad } from './$types';
 
-export const load: LayoutServerLoad = async ({ cookies, url, request }) => {
+export const load: LayoutServerLoad = async ({ cookies, url }) => {
 	let language = cookies.get('language');
 	if (!language) {
 		console.log("No language cookie found, setting to pl");

@@ -3,10 +3,6 @@
 	import IconButton from '@smui/icon-button';
 
 	import '../_main.scss';
-
-	import type { PageData } from './$types';
-
-	export let data: PageData;
 </script>
 
 <TopAppBar variant="static" color="primary">
@@ -21,8 +17,9 @@
 				data-sveltekit-reload
 				class="material-icons"
 				aria-label="Switch language"
-				href="?lang_switch=true">language</IconButton
-			>
+				href="/?lang_switch=true"
+				>language
+			</IconButton>
 		</Section>
 	</Row>
 </TopAppBar>
