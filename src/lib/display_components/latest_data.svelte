@@ -3,13 +3,16 @@
 
 	import { t, l, locales } from '$lib/translations';
 
-	export let stationId = 'alpha';
+	import type { stationData } from '$lib/stations';
+
+	export let stationData: stationData;
 </script>
 
 <Paper>
 	<Title>{$t('content.latest_measurements')}</Title>
 	<Content>
-		{$t('content.temperature')}: 20°C <br />
+		<p>{$t('content.station_name', { name: stationData.name })}</p>
+		<p>{$t('content.temperature', { temperature: '20°C' })}</p>
 
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero leo, vehicula finibus

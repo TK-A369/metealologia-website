@@ -7,6 +7,10 @@
 	import StationsList from '$lib/display_components/stations_list.svelte';
 
 	import { t, l, locales } from '$lib/translations';
+
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <LayoutGrid>
@@ -19,13 +23,13 @@
 		</Paper>
 	</Cell>
 	<Cell span={6}>
-		<LatestData />
+		<LatestData stationData={data.stations['alpha']} />
 	</Cell>
 	<Cell span={6}>
 		<ChartData />
 	</Cell>
 	<Cell spanDevices={{ desktop: 3, tablet: 3, phone: 2 }}>
-		<StationsList />
+		<StationsList stationsData={data.stations} />
 	</Cell>
 	<Cell spanDevices={{ desktop: 3, tablet: 3, phone: 2 }}>
 		<Paper>

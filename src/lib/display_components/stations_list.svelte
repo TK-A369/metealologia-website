@@ -7,7 +7,9 @@
 
 	import { t, l, locales } from '$lib/translations';
 
-	import stations from '$lib/stations';
+	import type { stationData } from '$lib/stations';
+
+	export let stationsData: { [key: string]: stationData };
 
 	setContext('SMUI:list:item:nav', true);
 </script>
@@ -17,13 +19,15 @@
 	<Content>
 		<div>
 			<List>
-				{#each Object.entries(stations) as [stationId, station]}
+				{#each Object.entries(stationsData) as [stationId, station]}
 					<Item href={`/stations/${stationId}`}>
 						<Text>
 							<PrimaryText>
 								{station.name}
 							</PrimaryText>
-							<SecondaryText>This is example station</SecondaryText>
+							<SecondaryText>
+								{station.desc}
+							</SecondaryText>
 						</Text>
 					</Item>
 				{/each}

@@ -8,7 +8,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	const station = stations[params.stationId];
 
 	if (station) {
-		return station;
+		return { stationId: params.stationId, stationData: station };
 	}
 
 	throw error(404, 'Not found');
